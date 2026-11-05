@@ -50,9 +50,16 @@ Open [http://localhost:3000](http://localhost:3000) to enter the spatial thinkin
 - **Infrastructure:** Terraform
 - **Voice:** Web Speech API
 
+<details>
+<summary><b>Expand Built With Details</b></summary>
+<br/>
+
 ---
 
-##  Table of Contents
+<br/>
+</details>
+
+## Table of Contents
 
 - [ The Problem](#-the-problem)
 - [ What is Stun?](#-what-is-stun)
@@ -72,34 +79,16 @@ Open [http://localhost:3000](http://localhost:3000) to enter the spatial thinkin
 - [ Hackathon Category](#-hackathon-category)
 - [ Demo & Resources](#-demo--resources)
 
----
+<details>
+<summary><b>Expand Table of Contents Details</b></summary>
+<br/>
 
 ---
 
-##  Quick Start
-
-###  Try It Live Now
- **[Open Stun Live App](https://stun-frontend-dev-279596491182.us-central1.run.app)** (Google Cloud hosted | Real-time deployment)
-
-###  Local Development (3 Commands)
-
-```bash
-# Terminal 1: Firestore Emulator
-cd backend && firebase emulators:start --only firestore --project stun-489205
-
-# Terminal 2: Backend API
-cd backend && bun install && bun run dev
-
-# Terminal 3: Frontend App  
-cd web && bun install && bun run dev
-```
-
-**Windows?** Single command:
-```powershell
-.\scripts\start-dev.ps1
-```
-
 ---
+
+<br/>
+</details>
 
 ##  The Problem
 
@@ -138,12 +127,16 @@ But thinking isn't linear. It's spatial. Visual. Interconnected.
 
 ---
 
-##  Key Features
+## Key Features
 
 ###  Visual AI Understanding
 - **Multimodal Context**: Gemini analyzes both canvas screenshots AND structured node data
 - **Spatial Reasoning**: AI understands relationships, distances, and hierarchies
 - **Action Planning**: Generates executable, validated command sequences
+
+<details>
+<summary><b>Expand Key Features Details</b></summary>
+<br/>
 
 ###  Hybrid Canvas Architecture
 - **Infinite Workspace**: Pan/zoom with TLDraw's operating system layer
@@ -173,6 +166,9 @@ But thinking isn't linear. It's spatial. Visual. Interconnected.
 
 ---
 
+<br/>
+</details>
+
 ## ️ Tech Stack
 
 ###  Frontend
@@ -186,6 +182,10 @@ But thinking isn't linear. It's spatial. Visual. Interconnected.
 - **Screenshots**: html2canvas
 - **Styling**: SCSS
 - **Storage**: Firebase SDK + localStorage
+
+<details>
+<summary><b>Expand ️ Tech Stack Details</b></summary>
+<br/>
 
 ###  Backend
 - **Runtime**: Node.js 20+
@@ -211,6 +211,9 @@ But thinking isn't linear. It's spatial. Visual. Interconnected.
 
 ---
 
+<br/>
+</details>
+
 ##  Why Gemini 2.5 Flash?
 
 | Capability | Why It's Perfect |
@@ -223,68 +226,16 @@ But thinking isn't linear. It's spatial. Visual. Interconnected.
 
 ---
 
-##  Getting Started
-
-### Prerequisites
-- **Node.js** 20+ ([download](https://nodejs.org))
-- **Bun** ([install](https://bun.sh)) or npm/yarn
-- **Google Cloud Account** ([free tier eligible](https://cloud.google.com/free))
-- **Gemini API Key** ([get free here](https://aistudio.google.com/app/apikey))
-- **Firebase Project** ([create one](https://console.firebase.google.com))
-
-### Installation (Full Setup)
-
-**Step 1: Clone Repository**
-```bash
-git clone https://github.com/Luxion-Labs/Stun.git
-cd Stun
-```
-
-**Step 2: Backend Setup**
-```bash
-cd backend
-cp .env.example .env.local
-
-# Edit .env.local and add:
-# GEMINI_API_KEY=your_key_here
-# GCP_PROJECT_ID=stun-489205
-# FIREBASE_SERVICE_ACCOUNT_KEY=<JSON from Firebase>
-
-bun install
-bun run dev
-# Backend runs on http://localhost:8080
-```
-
-**Step 3: Frontend Setup**
-```bash
-cd ../web
-cp .env.example .env.local
-
-# Edit .env.local and add Firebase config:
-# NEXT_PUBLIC_FIREBASE_API_KEY=...
-# NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
-
-bun install
-bun run dev
-# Frontend runs on http://localhost:3000 → /board/demo-board
-```
-
-**Step 4: Firestore Emulator** (in separate terminal)
-```bash
-cd backend
-firebase emulators:start --only firestore --project stun-489205
-```
-
- **You're ready!** Open [http://localhost:3000/board/demo-board](http://localhost:3000/board/demo-board)
-
----
-
-##  Usage Guide
+## Usage Guide
 
 ### 1. Open a Board
 ```
 http://localhost:3000/board/demo-board
 ```
+
+<details>
+<summary><b>Expand Usage Guide Details</b></summary>
+<br/>
 
 ### 2. Draw & Create Nodes
 - Use Excalidraw tools to draw shapes
@@ -310,6 +261,9 @@ Gemini analyzes your canvas + command, then executes actions live:
 
 ---
 
+<br/>
+</details>
+
 ## ️ Architecture
 
 ```
@@ -332,11 +286,18 @@ FIRESTORE DATABASE
     └─ board_presence (active users)
 ```
 
+<details>
+<summary><b>Expand ️ Architecture Details</b></summary>
+<br/>
+
 **Full Architecture Diagram**: See [ARCHITECTURE.md](ARCHITECTURE.md)
 
 ---
 
-##  Testing & QA
+<br/>
+</details>
+
+## Testing & QA
 
 ### Test the AI Pipeline
 ```bash
@@ -344,6 +305,10 @@ cd backend
 bun test tests/gemini/gemini-connectivity.test.ts
 bun test tests/gemini/gemini-actions.test.ts
 ```
+
+<details>
+<summary><b>Expand Testing & QA Details</b></summary>
+<br/>
 
 ### Test Board Persistence
 ```bash
@@ -364,6 +329,9 @@ bun test tests/ai.test.ts
 
 ---
 
+<br/>
+</details>
+
 ## ️ Google Cloud Deployment
 
 ### 1. Prerequisites
@@ -372,6 +340,10 @@ gcloud auth login
 gcloud config set project stun-489205
 terraform --version  # >= 1.5.0
 ```
+
+<details>
+<summary><b>Expand ️ Google Cloud Deployment Details</b></summary>
+<br/>
 
 ### 2. Deploy Infrastructure
 ```bash
@@ -406,7 +378,10 @@ gcloud run logs read stun-frontend-dev --limit=100
 
 ---
 
-##  Performance
+<br/>
+</details>
+
+## Performance
 
 | Metric | Value | Notes |
 |--------|-------|-------|
@@ -416,6 +391,10 @@ gcloud run logs read stun-frontend-dev --limit=100
 | **Firestore Write** | 50-200ms | Network I/O |
 | **Full AI Cycle** | 500-1500ms | End-to-end command execution |
 
+<details>
+<summary><b>Expand Performance Details</b></summary>
+<br/>
+
 **Optimizations**:
 - Debounced auto-save (3s) reduces write load
 - Optimistic UI updates before persistence
@@ -424,13 +403,20 @@ gcloud run logs read stun-frontend-dev --limit=100
 
 ---
 
-##  Security
+<br/>
+</details>
+
+## Security
 
 ### Authentication & Authorization
 -  Google OAuth 2.0 for login
 -  Firebase JWT tokens (1-hour TTL, auto-refresh)
 -  Backend validates every request token
 -  Firestore rules scoped to user ID
+
+<details>
+<summary><b>Expand Security Details</b></summary>
+<br/>
 
 ### Data Protection
 -  Secrets in Google Secret Manager (not in code)
@@ -445,6 +431,9 @@ gcloud run logs read stun-frontend-dev --limit=100
 -  Rate limiting (express-rate-limit)
 
 ---
+
+<br/>
+</details>
 
 ##  Documentation
 
@@ -475,7 +464,6 @@ We welcome contributions! To contribute:
 - Tests for new features (Bun test)
 
 ---
-
 
 ##  Impact & Learning
 
@@ -527,17 +515,6 @@ A production-grade spatial AI thinking environment that proves AI can go beyond 
 
 ---
 
-##  License & Acknowledgments
-
-**License**: MIT  -  See [LICENSE](LICENSE)
-
-**Built With** ️ by a passionate team using:
-- **Google Gemini**  -  Multimodal AI powerhouse
-- **Google Cloud Platform**  -  Production infrastructure
-- **Open Source**  -  TLDraw, Excalidraw, React Flow, Next.js, Express, Bun
-
----
-
 ##  Live Demo & Resources
 
 <div align="center">
@@ -572,6 +549,3 @@ Gemini Live Agent Challenge 2026  -  Transforming spatial thinking into visual r
 
 ## Maintainer Response SLA
 Luxion Labs enforces a strict 24-hour response SLA on all community issues, feature proposals, and pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md) for full development guidelines.
-
-## License
-Distributed under the MIT License. See [LICENSE](LICENSE) for details.
